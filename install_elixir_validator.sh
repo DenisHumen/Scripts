@@ -62,3 +62,12 @@ echo "Введи команду <' docker logs -f ev '> и проверь лог
 
 echo "Полезные команды:"
 echo -e "\e[0;32mЛоги - docker logs -f ev\e[0m"
+
+echo ""
+echo "----------------------------------------------------------------------------------------------------"
+echo "Для обновелния ноды введти эти команды:"
+echo "        docker kill elixir && \ "
+echo "        docker rm elixir && \ "
+echo "        docker pull elixirprotocol/validator:v3 && \ "
+echo "        docker run -d --env-file /rootvalidator.env --name elixir --restart unless-stopped -p 17690:17690 elixirprotocol/validator:v3 "
+echo "----------------------------------------------------------------------------------------------------"
