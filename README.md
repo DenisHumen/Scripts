@@ -29,5 +29,5 @@ bash your_script.sh
 
 🔄 Обновление
 ```bash
-git pull LINK
+git pull [LINK](https://github.com/MeSmallMan/scripts.git)
 ```
