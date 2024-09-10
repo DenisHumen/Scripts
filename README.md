@@ -18,12 +18,13 @@ bash <(curl -s RAW-LINK)
 ### Вариант 2: Клонирование репозитория
 
 ```bash
-git clone LINK
+git clone https://github.com/MeSmallMan/scripts.git
 cd scripts
 ```
 
 Запустите нужный скрипт:
 ```bash
+cd scripts
 bash your_script.sh
 ```
 
