@@ -53,7 +53,7 @@ docker run -d --env-file /root/validator.env --name elixir --restart unless-stop
 echo ""
 echo "----------------------------------------------------------------------------------------------------"
 echo "Запуск ноды"
-docker run -d --restart unless-stopped --name ev elixir-validator
+
 
 
 
