@@ -73,4 +73,7 @@ echo "        docker run -d --env-file /rootvalidator.env --name elixir --restar
 echo "----------------------------------------------------------------------------------------------------"
 
 sleep 2
+docker ps -a
+echo ""
+echo ""
 docker logs -f elixir
