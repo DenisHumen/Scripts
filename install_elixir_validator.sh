@@ -49,7 +49,7 @@ docker pull elixirprotocol/validator:v3
 echo "----------------------------------------------------------------------------------------------------"
 echo "Билд ноды"
 echo ""
-docker run -d --env-file /root/validator.env --name elixir --restart unless-stopped elixirprotocol/validator:v3
+docker run -d --env-file /root/validator.env --name elixir --restart unless-stopped -p 17690:17690 elixirprotocol/validator:v3
 echo ""
 echo "----------------------------------------------------------------------------------------------------"
 echo "Запуск ноды"
