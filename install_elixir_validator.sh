@@ -71,3 +71,6 @@ echo "        docker rm elixir && \ "
 echo "        docker pull elixirprotocol/validator:v3 && \ "
 echo "        docker run -d --env-file /rootvalidator.env --name elixir --restart unless-stopped -p 17690:17690 elixirprotocol/validator:v3 "
 echo "----------------------------------------------------------------------------------------------------"
+
+sleep 2
+docker logs -f elixir
