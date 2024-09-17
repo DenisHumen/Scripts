@@ -2,6 +2,7 @@ import requests
 import mysql.connector
 import time
 import paramiko
+from tqdm import tqdm
 
 
 base = {
@@ -43,7 +44,7 @@ def last_update_nodes():
     def base_value(values):
         connect = mysql.connector.connect(**base)
         if connect.is_connected():
-            print('К базе кодключился')
+            None
         else:
             raise Exception('Ошибка подключения к базе')
         cursor = connect.cursor()
@@ -68,7 +69,7 @@ def update_values_last_update(version_container, ip):
     print(f'Последняя версия контейнера была записана в базе {version_container}')
     connect = mysql.connector.connect(**base)
     if connect.is_connected():
-        print('К базе кодключился')
+        None
     else:
         raise Exception('Ошибка подключения к базе в функции update_values_last_update')
     cursor = connect.cursor()
@@ -127,22 +128,20 @@ def main():
 
     # Проверка обновелния docker hub == mysql values
     index = -1
-    for update in mysql_value_last_update_nodes:
-        index +=1
-        print(f'Идекс: {index}')
+    for index, update in tqdm(enumerate(mysql_value_last_update_nodes), total=len(mysql_value_last_update_nodes), desc="Processing updates", colour='#009FBD'):
 
         if update == last_update:
-            update = False
-            print(f'Обновление для {ip_nodes[index]} не нужно {update}')
             time.sleep(3)
         else:
-            update = True
-            print(f'Обновление для {ip_nodes[index]} нужно {update}')
             update_nodes(ip_nodes[index])
             time.sleep(3)
             update_values_last_update(last_update, ip_nodes[index])
         
         
+main()
+
+
+
 main()
 
 
