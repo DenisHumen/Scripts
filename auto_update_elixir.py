@@ -138,7 +138,7 @@ def main():
         else:
             update = True
             print(f'Обновление для {ip_nodes[index]} нужно {update}')
-            #update_nodes(ip_nodes[index])
+            update_nodes(ip_nodes[index])
             time.sleep(3)
             update_values_last_update(last_update, ip_nodes[index])
         
