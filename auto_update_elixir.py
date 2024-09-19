@@ -88,7 +88,7 @@ def update_values_last_update(version_container, ip):
 def update_nodes(ip):
     print(f'Обновление ноды {ip}')
     username = 'root'
-    password = 'RAD_bd01'
+    password = 'PASSWORD ELIXIR'
     port = 22
 
     try:
