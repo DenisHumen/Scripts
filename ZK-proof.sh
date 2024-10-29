@@ -1,7 +1,3 @@
-https://raw.githubusercontent.com/DOUBLE-TOP/tools/refs/heads/main/foundry.sh
-
-
-
 #!/bin/bash
 
 echo "*****************************************************************************"
