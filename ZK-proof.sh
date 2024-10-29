@@ -9,7 +9,7 @@ if [ "$INSTALL_DEPENDENCIES" -eq 1 ]; then
     echo "Устанавливаем зависимости"
     echo "*****************************************************************************"
 
-    curl -s https://raw.githubusercontent.com/DOUBLE-TOP/tools/main/doubletop.sh | bash
+    curl -s https://raw.githubusercontent.com/DenisHumen/Logo/refs/heads/main/logo0.sh | bash
     curl -s https://raw.githubusercontent.com/DOUBLE-TOP/tools/main/main.sh | bash
     curl -s https://raw.githubusercontent.com/DOUBLE-TOP/tools/main/ufw.sh | bash
     curl -s https://raw.githubusercontent.com/DOUBLE-TOP/tools/main/rust.sh | bash
@@ -25,7 +25,7 @@ if [ "$INSTALL_DEPENDENCIES" -eq 1 ]; then
     cd $HOME
     git clone https://github.com/yetanotherco/aligned_layer.git && cd aligned_layer
     source $HOME/.profile
-    cast wallet import --interactive wallet
+    /root/.foundry/bin/cast wallet import --interactive wallet
 
     echo "*****************************************************************************"
     echo "Устанавливаем дополнительные зависимости и проходим квиз. Ответы(Nakamoto, Pacific, Green)."
