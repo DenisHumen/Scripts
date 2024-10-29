@@ -1,3 +1,7 @@
+https://raw.githubusercontent.com/DOUBLE-TOP/tools/refs/heads/main/foundry.sh
+
+
+
 #!/bin/bash
 
 echo "*****************************************************************************"
@@ -9,7 +13,7 @@ if [ "$INSTALL_DEPENDENCIES" -eq 1 ]; then
     echo "Устанавливаем зависимости"
     echo "*****************************************************************************"
 
-    curl -s https://raw.githubusercontent.com/DenisHumen/Logo/refs/heads/main/logo0.sh | bash
+    curl -s https://raw.githubusercontent.com/DOUBLE-TOP/tools/main/doubletop.sh | bash
     curl -s https://raw.githubusercontent.com/DOUBLE-TOP/tools/main/main.sh | bash
     curl -s https://raw.githubusercontent.com/DOUBLE-TOP/tools/main/ufw.sh | bash
     curl -s https://raw.githubusercontent.com/DOUBLE-TOP/tools/main/rust.sh | bash
@@ -24,6 +28,7 @@ if [ "$INSTALL_DEPENDENCIES" -eq 1 ]; then
 
     cd $HOME
     git clone https://github.com/yetanotherco/aligned_layer.git && cd aligned_layer
+    source $HOME/.profile
     cast wallet import --interactive wallet
 
     echo "*****************************************************************************"
@@ -54,4 +59,6 @@ else
     echo "Данные не удалены."
 fi
 
-
+echo "-----------------------------------------------------------------------------"
+echo "Wish lifechange case with DOUBLETOP"
+echo "-----------------------------------------------------------------------------"
