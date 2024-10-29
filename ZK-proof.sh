@@ -19,18 +19,29 @@ if [ "$INSTALL_DEPENDENCIES" -eq 1 ]; then
     source $HOME/.profile
 
     echo "*****************************************************************************"
-    echo "Качаем проект и импортируем кошелек по приватному ключу"
+    echo "Качаем проект."
     echo "*****************************************************************************"
 
     cd $HOME
     git clone https://github.com/yetanotherco/aligned_layer.git && cd aligned_layer
-    source $HOME/.profile
-    /root/.foundry/bin/cast wallet import --interactive wallet
 
     echo "*****************************************************************************"
     echo "Устанавливаем дополнительные зависимости и проходим квиз. Ответы(Nakamoto, Pacific, Green)."
     echo "*****************************************************************************"
 fi
+
+
+echo "Хотите добавить кошелек? Введите 1 для 'Да' или 2 для 'Нет':"
+read ADD_WALLET
+
+if [ "$ADD_WALLET" -eq 1 ]; then
+    source $HOME/.profile
+    /root/.foundry/bin/cast wallet import --interactive wallet
+else
+    echo "Кошелек не добавлен."
+fi
+
+
 
 echo "Есть ли баланс 0.004 ETH? Введите 1 для 'Да' или 2 для 'Нет':"
 read CHOICE
