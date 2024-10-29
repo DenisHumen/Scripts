@@ -23,22 +23,7 @@ if [ "$INSTALL_DEPENDENCIES" -eq 1 ]; then
     echo "*****************************************************************************"
 
     cd $HOME
-    MAX_RETRIES=5
-    for ((i=1; i<=MAX_RETRIES; i++)); do
-        if git clone https://github.com/yetanotherco/aligned_layer.git; then
-            cd aligned_layer
-            echo "Клонирование успешно завершено."
-            break
-        else
-            echo "Попытка $i из $MAX_RETRIES: Не удалось клонировать репозиторий. Повторяю..."
-            sleep 2  # Ждем перед следующей попыткой
-        fi
-    done
-    
-    if [ ! -d "$HOME/aligned_layer" ]; then
-        echo "Ошибка: не удалось клонировать репозиторий после $MAX_RETRIES попыток."
-        exit 1
-    fi
+    #git clone https://github.com/yetanotherco/aligned_layer.git && cd aligned_layer
 
     echo "*****************************************************************************"
     echo "Устанавливаем дополнительные зависимости и проходим квиз. Ответы(Nakamoto, Pacific, Green)."
