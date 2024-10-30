@@ -47,6 +47,7 @@ echo "Есть ли баланс 0.004 ETH? Введите 1 для 'Да' ил�
 read CHOICE
 
 if [ "$CHOICE" -eq 1 ]; then
+    source /root/.bashrc
     cd "$HOME/aligned_layer/examples/zkquiz" || exit
     make answer_quiz KEYSTORE_PATH="$HOME/.foundry/keystores/wallet"
 else
