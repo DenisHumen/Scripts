@@ -36,7 +36,7 @@ git pull https://github.com/MeSmallMan/scripts.git
 
 
 
-# Скрипт auto_update_elixir.py
+# Скрипт auto_update_elixir.py (ПРОЕКТ УСТАРЕЛ, БОЛЬШЕ НЕ АККТУАЛЬНО)
 
 Скрипт `auto_update_elixir.py` предназначен для автоматического обновления данных в базе данных MySQL. Для корректной работы скрипта соблюдайте следующие требования и настройки:
 
