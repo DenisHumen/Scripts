@@ -1,6 +1,6 @@
 #!/bin/bash
 
-curl -s https://raw.githubusercontent.com/MeSmallMan/logo/main/logo0.sh | bash
+curl -s https://raw.githubusercontent.com/DenisHumen/Logo/main/logo0.sh | bash
 
 
 docker stop elixir && docker rm elixir

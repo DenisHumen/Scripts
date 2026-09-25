@@ -6,7 +6,7 @@ apt install curl -y
 source ~/.bashrc
 
 
-curl -s https://raw.githubusercontent.com/MeSmallMan/logo/main/logo0.sh | bash
+curl -s https://raw.githubusercontent.com/DenisHumen/Logo/main/logo0.sh | bash
 echo ""
 echo "Перед тем как хапускать ножу авторизоваться от пользователя root"
 echo ""
