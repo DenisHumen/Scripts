@@ -159,7 +159,7 @@ Answer the four prompts with `1` (yes) or `2` (no): install dependencies, import
 
 | Script | Issue | Workaround |
 |---|---|---|
-| `install_allora.sh` | `config.json` is downloaded from `MeSmallMan/allora`, which now returns 404, so the worker is not configured. The `sed` meant to add 10m/20m/1h intervals to `model.py` uses unescaped brackets and never matches, and the last banner line has a typo (`curl -shttps://…`). | Finish the remaining steps by hand in `~/basic-coin-prediction-node` with your own `config.json`. |
+| `install_allora.sh` | `config.json` is downloaded from `MeSmallMan/allora`, which now returns 404, so the worker is not configured. The `sed` meant to add 10m/20m/1h intervals to `model.py` uses unescaped brackets and never matches. | Finish the remaining steps by hand in `~/basic-coin-prediction-node` with your own `config.json`. |
 | `install-unichain.sh` | `.env.sepolia` is downloaded from `DenisHumen/config-file`, which now returns 404. | Create `unichain-node/.env.sepolia` yourself (see the Unichain repository) and run `docker compose up -d`. |
 | `ZK-proof.sh` | The `git clone` of `aligned_layer` is commented out, so `~/aligned_layer/examples/zkquiz` must already exist. The prompts expect a number; any other input makes the `[ -eq ]` test fail. | Clone `yetanotherco/aligned_layer` into `~/aligned_layer` first. |
 | `install_elixir_validator.sh` | `validator.env` is written to the current directory but the container reads `/root/validator.env`. The on-screen hints mention `docker logs -f ev` and an update command with `/rootvalidator.env`. | Run it from `/root`; use `docker logs -f elixir` and `elixir_update.sh`. |

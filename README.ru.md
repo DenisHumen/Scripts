@@ -159,7 +159,7 @@ bash ZK-proof.sh
 
 | Скрипт | Проблема | Как обойти |
 |---|---|---|
-| `install_allora.sh` | `config.json` скачивается из `MeSmallMan/allora`, а этот адрес теперь отдаёт 404 — воркер остаётся ненастроенным. `sed`, который должен добавить интервалы 10m/20m/1h в `model.py`, использует неэкранированные скобки и ничего не находит, а в последней строке с баннером опечатка (`curl -shttps://…`). | Выполните оставшиеся шаги вручную в `~/basic-coin-prediction-node` со своим `config.json`. |
+| `install_allora.sh` | `config.json` скачивается из `MeSmallMan/allora`, а этот адрес теперь отдаёт 404 — воркер остаётся ненастроенным. `sed`, который должен добавить интервалы 10m/20m/1h в `model.py`, использует неэкранированные скобки и ничего не находит. | Выполните оставшиеся шаги вручную в `~/basic-coin-prediction-node` со своим `config.json`. |
 | `install-unichain.sh` | `.env.sepolia` скачивается из `DenisHumen/config-file`, а этот адрес теперь отдаёт 404. | Создайте `unichain-node/.env.sepolia` сами (см. репозиторий Unichain) и выполните `docker compose up -d`. |
 | `ZK-proof.sh` | `git clone` репозитория `aligned_layer` закомментирован, поэтому `~/aligned_layer/examples/zkquiz` должен уже существовать. Ответы должны быть числами: любой другой ввод ломает проверку `[ -eq ]`. | Предварительно склонируйте `yetanotherco/aligned_layer` в `~/aligned_layer`. |
 | `install_elixir_validator.sh` | `validator.env` записывается в текущий каталог, а контейнер читает `/root/validator.env`. В подсказках на экране — `docker logs -f ev` и команда обновления с опечаткой `/rootvalidator.env`. | Запускайте из `/root`; используйте `docker logs -f elixir` и `elixir_update.sh`. |
